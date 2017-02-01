@@ -1,0 +1,14 @@
+.elements-list {
+
+    
+
+    li{
+        width: $column - $gutter;
+        margin-right: $gutter;
+        float: left;
+
+        &:nth-of-type(4n){
+            margin-right: 0px;
+        }
+    }
+}

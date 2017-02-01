@@ -1,5 +1,8 @@
-$primary-color: #89C132;
+@import 'utilities/placeholders'; // placegoldes
+@import 'utilities/variables'; // variables
+@import 'utilities/reset'; // reset
 
-body {
-    background-color: $primary-color;
-}
+
+// layout
+@import 'layout/grid';
+@import 'base/base';

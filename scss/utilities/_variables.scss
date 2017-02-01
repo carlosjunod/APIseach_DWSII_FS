@@ -1,0 +1,18 @@
+// Color variables
+$background-color: #EEF1F3;
+$primary-color: #061535;
+$secondary-color: #1E8BC4;
+$highligt-color: #FDC42C;
+$dark-color: #424244;
+$alert-color: #DB365B;
+
+
+// grid
+$n-of-columns: 4;
+$columns: 100 / $n-of-columns;
+$gutter: $columns * 0.07%;
+$column: $columns + ($gutter / $n-of-columns);
+
+
+// spacing
+$content: 80%;

@@ -1,0 +1,7 @@
+.elements-list {
+    @extend %wrap;
+
+    li {
+      img {width: 100%;}
+    }
+}
