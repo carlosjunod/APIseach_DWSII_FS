@@ -1,0 +1,29 @@
+{
+  "name": "search-api",
+  "version": "1.0.0",
+  "description": "Project for Full Sail University, DWS_II, Build an API driven search app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosjunod/APIseach.git"
+  },
+  "keywords": [
+    "API",
+    "search"
+  ],
+  "author": "@carlosjunod",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosjunod/APIseach/issues"
+  },
+  "homepage": "https://github.com/carlosjunod/APIseach#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.7",
+    "gulp": "^3.9.1",
+    "gulp-refresh": "^1.1.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
