@@ -4,4 +4,22 @@
     li {
       img {width: 100%;}
     }
+
+    &:after{
+      content: "";
+      clear: both;
+      display: block;
+    }
+}
+
+footer{
+    background-color: $primary-color;
+    text-align: center;
+    
+    p{
+        @extend %wrap;
+        margin-bottom: 0px;
+        color:$background-color;
+        @include padding-box;
+    }
 }

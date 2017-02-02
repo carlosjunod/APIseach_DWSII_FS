@@ -4,10 +4,12 @@ v1.6.1
 Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
+
+///////// Customized by @carlosjunod
 */
 
 html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, blockquote, button, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var,
@@ -61,15 +63,15 @@ a {
 
 /* change colours to suit your needs */
 ins {
-    background-color:#ff9;
-    color:#000;
+    background-color:$background-color;
+    color:$primary-color;
     text-decoration:none;
 }
 
 /* change colours to suit your needs */
 mark {
-    background-color:#ff9;
-    color:#000;
+    background-color:$background-color;
+    color:$primary-color;
     font-style:italic;
     font-weight:bold;
 }
@@ -93,7 +95,7 @@ hr {
     display:block;
     height:1px;
     border:0;
-    border-top:1px solid #cccccc;
+    border-top:1px solid $dark-color;
     margin:1em 0;
     padding:0;
 }

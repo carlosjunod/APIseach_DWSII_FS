@@ -1,0 +1,6 @@
+@mixin padding-box ($top: 2rem, $left: 2rem, $bottom: 2rem, $right: 2rem) {
+    padding-top: $top;
+    padding-left: $left;
+    padding-bottom: $bottom;
+    padding-right: $right;
+}
