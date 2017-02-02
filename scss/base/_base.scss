@@ -2,38 +2,77 @@
     @extend %wrap;
 
     li {
-      img {width: 100%;}
+        margin-bottom: 2rem;
+        img {width: 100%;}
     }
 
     &:after{
-      content: "";
-      clear: both;
-      display: block;
+        @extend %clearfix;
     }
 }
 
 header{
+    nav{
+        background-color: rgba($dark-color, 0.7);
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+
+        img{
+            float: left;
+        }
+
+        ul{
+            float: right;
+
+            li{
+            display: inline-block;
+
+                a{
+                    font-weight: lighter;
+                    color: $background-color;
+                    padding: 0px 3rem;
+                    font-size: 2rem;
+                    display: block;
+                    line-height: 6rem;
+                }
+            }
+
+            &:after{
+                @extend %clearfix;
+            }
+        }
+
+        &:after{
+            @extend %clearfix;
+        }
+    }
+
+
     background-image: url('https://images.unsplash.com/photo-1485848225137-7a97afbde637');
     background-size: cover;
     margin-bottom: 2rem;
-
     form{
+        &:after{
+            @extend %clearfix;
+        }
         @extend %wrap;
-        @include padding-box;
+        padding: 100px 0px;
         input{
-            border: none;
-            background-color: $dark-color;
-            @include padding-box(2rem, 2rem, 2rem, 2rem);
+
+            float: left;
 
             &[type='text']{
                 width: $content;
             }
 
+            &[type='submit']{
+                width: 20%;
+            }
         }
     }
 
 }
-
 
 footer{
     background-color: $primary-color;
@@ -43,6 +82,6 @@ footer{
         @extend %wrap;
         margin-bottom: 0px;
         color:$background-color;
-        @include padding-box;
+        padding: 20px;
     }
 }

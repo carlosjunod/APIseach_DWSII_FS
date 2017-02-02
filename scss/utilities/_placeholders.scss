@@ -3,3 +3,8 @@
     margin-left: auto;
     width: 80%;
 }
+%clearfix{
+    content: "";
+    clear: both;
+    display: block;
+}

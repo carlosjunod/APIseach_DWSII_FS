@@ -1,0 +1,19 @@
+input[type='text'],
+input[type='email'],
+input[type='password'],
+textarea{
+    border: none;
+    @include padding-buttons;
+}
+
+input[type='submit'],
+button{
+    @extend input[type='text'];
+    font-size: 2rem;
+    line-height: 1.3rem;
+}
+
+.darkinput{
+    background-color: $dark-color;
+    color: $background-color;
+}
