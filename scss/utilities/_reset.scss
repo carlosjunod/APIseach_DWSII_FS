@@ -24,14 +24,17 @@ time, mark, audio, video {
     padding:0;
     border:0;
     outline:0;
-    font-size:100%;
+    font-size:$font-base-line;
     vertical-align:baseline;
     background:transparent;
     box-sizing: border-box;
+    line-height:1;
 }
 
 body {
-    line-height:1;
+    font-size: $size;
+    line-height: $lineh;
+    font-family: $typeface;
 }
 
 article,aside,details,figcaption,figure,
@@ -102,4 +105,28 @@ hr {
 
 input, select {
     vertical-align:middle;
+}
+
+h1{
+    font-size: $s-h1;
+}
+
+h2{
+    font-size: $s-h2;
+}
+
+h3{
+    font-size: $s-h3;
+}
+
+h4{
+    font-size: $s-h4;
+}
+
+h5{
+    font-size: $s-h5;
+}
+
+h6{
+    font-size: $s-h6;
 }
