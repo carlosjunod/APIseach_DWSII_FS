@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Signika:300,400,700");
 /*
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -23,13 +24,16 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   outline: 0;
-  font-size: 100%;
+  font-size: 10px;
   vertical-align: baseline;
   background: transparent;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  line-height: 1; }
 
 body {
-  line-height: 1; }
+  font-size: 1.6rem;
+  line-height: 1.45rem;
+  font-family: "Signika", arial, sans-serif; }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -89,7 +93,25 @@ hr {
 input, select {
   vertical-align: middle; }
 
-.elements-list, footer p {
+h1 {
+  font-size: 5.5694rem; }
+
+h2 {
+  font-size: 4.28415rem; }
+
+h3 {
+  font-size: 3.2955rem; }
+
+h4 {
+  font-size: 2.535rem; }
+
+h5 {
+  font-size: 1.95rem; }
+
+h6 {
+  font-size: 1.5rem; }
+
+.elements-list, header form, footer p {
   margin-right: auto;
   margin-left: auto;
   width: 80%; }
@@ -108,6 +130,25 @@ input, select {
   content: "";
   clear: both;
   display: block; }
+
+header {
+  background-image: url("https://images.unsplash.com/photo-1485848225137-7a97afbde637");
+  background-size: cover;
+  margin-bottom: 2rem; }
+  header form {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem; }
+    header form input {
+      border: none;
+      background-color: #424244;
+      padding-top: 2rem;
+      padding-left: 2rem;
+      padding-bottom: 2rem;
+      padding-right: 2rem; }
+      header form input[type='text'] {
+        width: 80%; }
 
 footer {
   background-color: #061535;
