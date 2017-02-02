@@ -14,6 +14,7 @@ $column: $columns + ($gutter / $n-of-columns);
 
 // spacing
 $content: 80%;
+$nav-height: 6rem;
 
 //external typefaces
 @import url('https://fonts.googleapis.com/css?family=Signika:300,400,700');
@@ -24,13 +25,13 @@ $fontfamily2: ""; //place name typeface here
 $fontfamily3: ""; //place name typeface here
 
 // Font Set up
-$font-base-line: 10px;
+$font-base-line: 14px;
 $size: 1.6rem;
 $lineh: 1.45rem;
 $typeface: $fontfamily1, arial, sans-serif;
 
 //headline scale
-$scale: 1.3;
+$scale: 1.4;
 
 $s-h6: 1.5rem;
 $s-h5: $s-h6 * $scale;

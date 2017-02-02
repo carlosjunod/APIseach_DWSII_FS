@@ -24,7 +24,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   outline: 0;
-  font-size: 10px;
+  font-size: 14px;
   vertical-align: baseline;
   background: transparent;
   box-sizing: border-box;
@@ -94,19 +94,19 @@ input, select {
   vertical-align: middle; }
 
 h1 {
-  font-size: 5.5694rem; }
+  font-size: 8.06736rem; }
 
 h2 {
-  font-size: 4.28415rem; }
+  font-size: 5.7624rem; }
 
 h3 {
-  font-size: 3.2955rem; }
+  font-size: 4.116rem; }
 
 h4 {
-  font-size: 2.535rem; }
+  font-size: 2.94rem; }
 
 h5 {
-  font-size: 1.95rem; }
+  font-size: 2.1rem; }
 
 h6 {
   font-size: 1.5rem; }
@@ -134,8 +134,8 @@ textarea {
 
 input[type='submit'],
 button {
-  font-size: 2rem;
-  line-height: 1.3rem; }
+  font-size: 1.3rem;
+  line-height: 1rem; }
 
 .darkinput {
   background-color: #424244;
@@ -163,7 +163,9 @@ header {
     padding-left: 10%;
     padding-right: 10%; }
     header nav img {
-      float: left; }
+      float: left;
+      width: auto;
+      height: 6rem; }
     header nav ul {
       float: right; }
       header nav ul li {
@@ -172,11 +174,11 @@ header {
           font-weight: lighter;
           color: #EEF1F3;
           padding: 0px 3rem;
-          font-size: 2rem;
+          font-size: 1.3rem;
           display: block;
           line-height: 6rem; }
   header form {
-    padding: 100px 0px; }
+    padding: 10rem 0px; }
     header form input {
       float: left; }
       header form input[type='text'], header form input[type='submit'], header form
@@ -191,4 +193,4 @@ footer {
   footer p {
     margin-bottom: 0px;
     color: #EEF1F3;
-    padding: 20px; }
+    padding: 2rem; }

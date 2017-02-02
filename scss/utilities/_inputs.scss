@@ -9,8 +9,8 @@ textarea{
 input[type='submit'],
 button{
     @extend input[type='text'];
-    font-size: 2rem;
-    line-height: 1.3rem;
+    font-size: 1.3rem;
+    line-height: 1rem;
 }
 
 .darkinput{
