@@ -4,3 +4,10 @@
     padding-bottom: $bottom;
     padding-right: $right;
 }
+
+@mixin wrapper ($width: 80%){
+    @extend %wrap-aligment;
+    margin-right: auto;
+    margin-left: auto;
+    width: $width;
+}
