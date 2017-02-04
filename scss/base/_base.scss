@@ -6,7 +6,7 @@ header{
 
     &:after{
         content: "";
-        @extend %bg-gradient;
+        @extend %bg-gradient-bottom;
         min-height: 5rem;
     }
 
@@ -54,6 +54,13 @@ header{
         }
         @include wrapper(50%);
         padding: 10rem 0px;
+
+        .radiobtn{
+            background-color: rgba($dark-color, 0.5);
+            padding: 0.5rem;
+            color: $background-color;
+        }
+
         input{
 
             float: left;
@@ -64,6 +71,14 @@ header{
 
             &[type='submit']{
                 width: 20%;
+                background-color: $highligt-color;
+                color: $dark-color;
+                font-weight: bold;
+
+                &:hover{
+                    background-color: $secondary-color;
+                    color: $background-color;
+                }
             }
         }
     }
@@ -86,7 +101,7 @@ header{
         position: relative;
 
         h2{
-            @extend %bg-gradient;
+            @extend %bg-gradient-bottom;
             font-size: 2rem;
             display: block;
             color: $background-color;
@@ -120,10 +135,39 @@ header{
     }
 }
 
+.actor{
+
+    padding: 1rem;
+    text-align: right;
+    @extend %bg-gradient-top;
+    top:0px;
+
+    h3{
+        color: $background-color;
+        position: relative;
+        display: inline-block;
+        font-size: 1.5rem;
+        top: -1rem;
+    }
+
+    .actor-pic{
+        display: inline-block;
+        border: 2px solid $background-color;
+        box-shadow: 1px 1px 10px $dark-color;
+        @include circle-img(3rem, 3rem);
+        background-color: $dark-color;
+    }
+}
+
+
+
 
 footer{
     background-color: $primary-color;
     text-align: center;
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
 
     p{
         @include wrapper;

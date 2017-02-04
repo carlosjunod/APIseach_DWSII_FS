@@ -6,7 +6,7 @@
 
         <header>
                 <nav>
-                    <a href="#"><img src="http://www.placehold.it/150x60?text=logo"/></a>
+                    <a href="../"><img src="images/movieSeeker.png"/></a>
 
                     <ul>
                         <li><a href="#">Home</a></li>
@@ -17,6 +17,16 @@
                 </nav>
 
                 <form>
+                    <fieldset class="radiobtn">
+                        <label for="movie-title">
+                            <input type="radio" name="parameter" id="movie-title" checked="true">
+                            by Movie Title</label>
+
+
+                        <label for="actor-name"><input type="radio" name="parameter" id="actor-name">by Actor name
+                        </label>
+
+                    </fieldset>
                     <input id="field" type="text" name="search" value="" placeholder="search for a movie here...">
                     <input type="submit" name="submit" id="submit" class="darkinput">
                 </form>

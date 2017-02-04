@@ -17,3 +17,8 @@ button{
     background-color: $dark-color;
     color: $background-color;
 }
+
+
+input[type='radio']{
+    float: none;
+}

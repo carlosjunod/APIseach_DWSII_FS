@@ -11,3 +11,13 @@
     margin-left: auto;
     width: $width;
 }
+
+@mixin circle-img($w:2rem, $h:2rem, $border-rad:$w/2){
+    background-size: cover;
+    background-position: center center;
+    width: $w;
+    height: $h;
+    -webkit-border-radius: $border-rad;
+    -moz-border-radius: $border-rad;
+    border-radius: $border-rad;
+}
