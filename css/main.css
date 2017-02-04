@@ -218,7 +218,7 @@ header {
   .elements-list li, .message li {
     margin-bottom: 2rem;
     height: 400px;
-    background-size: cover;
+    background-size: cover, cover;
     position: relative; }
     .elements-list li h2, .message li h2 {
       font-size: 2rem;
