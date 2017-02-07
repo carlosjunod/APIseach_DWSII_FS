@@ -1,5 +1,8 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movie Seeker</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
     <body>
@@ -18,17 +21,20 @@
 
                 <form>
                     <fieldset class="radiobtn">
+                        
                         <label for="movie-title">
-                            <input type="radio" name="parameter" id="movie-title" checked="true">
-                            by Movie Title</label>
-
-
-                        <label for="actor-name"><input type="radio" name="parameter" id="actor-name">by Actor name
+                            <input type="radio" name="parameter" id="movie-title" checked="true">by Movie Title
                         </label>
 
+
+                        <label for="actor-name">
+                            <input type="radio" name="parameter" id="actor-name">by Actor name
+                        </label>
                     </fieldset>
-                    <input id="field" type="text" name="search" value="" placeholder="search for a movie here...">
-                    <input type="submit" name="submit" id="submit" class="darkinput">
+
+                    <p><input id="field" type="text" name="search" value="" placeholder="search for a movie here..."></p>
+
+                    <p><input type="submit" name="submit" id="submit" class="darkinput"></p>
                 </form>
         </header>
 

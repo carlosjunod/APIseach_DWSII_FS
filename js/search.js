@@ -73,16 +73,12 @@ function populateList(){
                             <div class='actor'>
                             <h3>${actor.name}</h3>
                             <span class="actor-pic" style="background-image:url('https://image.tmdb.org/t/p/w150${actor.profile_path}')"></span>
-
-
                             </div>
-
                         </li>`;
 
                         container.insertAdjacentHTML('beforeend', movieElement);
 
                     })
-
 
 
                 })

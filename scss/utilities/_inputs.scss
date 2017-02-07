@@ -3,6 +3,7 @@ input[type='email'],
 input[type='password'],
 textarea{
     border: none;
+    box-sizing: border-box;
     @include padding-buttons;
 }
 

@@ -1,0 +1,113 @@
+header{
+    // background-image: url('https://images.unsplash.com/photo-1485848225137-7a97afbde637');
+    background-color: green;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+
+    &:after{
+        @extend %bg-gradient-bottom;
+    }
+
+    nav{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        a{
+            order:1;
+            img{
+                width: 100%;
+                padding-left: 2rem;
+                padding-right: 2rem;
+
+            }
+        }
+
+        ul{
+            // flex-box
+            order: 0;
+            flex-basis: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            height: 40%;
+            background-color: rgba($dark-color, 0.7);
+
+            li a{
+                color: $background-color;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    form{
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        width: 100%;
+
+        .radiobtn{
+            background-color: rgba($dark-color, 0.5);
+            padding: 0.5rem;
+            color: $background-color;
+            width: 100%;
+
+            .fielset-wrap{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                label{
+                    background-color: purple;
+                    border:1px solid white;
+                }
+            }
+
+        }
+
+
+
+        p{
+
+
+            &:first-of-type(){
+                flex-grow:2;
+                flex-basis: 400px;
+                background-color: red;
+
+                // flex: 2 0 320px;
+            }
+
+            &:last-of-type(){
+                flex-grow:1;
+                flex-basis: 200px;
+                background-color: blue;
+
+                // flex: 1 0 150px;
+            }
+
+            input{
+                padding: 0px;
+                width: 100%;
+                line-height: 1rem;
+
+                &[type='text']{
+
+                }
+
+                &[type='submit']{
+                    line-height: 1rem;
+                }
+            }
+
+        }
+
+    }
+}

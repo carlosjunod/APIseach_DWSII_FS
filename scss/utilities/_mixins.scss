@@ -7,8 +7,6 @@
 
 @mixin wrapper ($width: 80%){
     @extend %wrap-aligment;
-    margin-right: auto;
-    margin-left: auto;
     width: $width;
 }
 
@@ -20,4 +18,28 @@
     -webkit-border-radius: $border-rad;
     -moz-border-radius: $border-rad;
     border-radius: $border-rad;
+}
+
+
+//////////// mediaqueries ////////////////
+@mixin mq($size) {
+    @if $size == small{
+        @media #{$small}{ @content; }
+    }
+    @else if $size == medium{
+        @media #{$medium}{ @content; }
+    }
+    @else if $size == large{
+        @media #{$large}{ @content; }
+    }
+    @else if $size == mediumAndBigger{
+        @media #{$medium-more}{ @content; }
+    }
+    @else if $size == largeAndBigger{
+        @media #{$large-more}{ @content; }
+    }
+    @else if $size == x-large{
+        @media #{$x-large}{ @content; }
+    }
+
 }
