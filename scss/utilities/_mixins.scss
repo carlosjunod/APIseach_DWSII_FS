@@ -6,7 +6,8 @@
 }
 
 @mixin wrapper ($width: 80%){
-    @extend %wrap-aligment;
+    margin-right: auto;
+    margin-left: auto;
     width: $width;
 }
 
@@ -24,13 +25,21 @@
 //////////// mediaqueries ////////////////
 @mixin mq($size) {
     @if $size == small{
-        @media #{$small}{ @content; }
+        @media #{$small-only}{ @content; }
     }
     @else if $size == medium{
-        @media #{$medium}{ @content; }
+        @media #{$medium-only}{ @content; }
     }
     @else if $size == large{
-        @media #{$large}{ @content; }
+        @media #{$large-only}{ @content; }
+    }
+    @else if $size == x-large{
+        @media #{$x-large}{ @content; }
+    }
+
+    //and more
+    @else if $size == smallAndBigger{
+        @media #{$small-more}{ @content; }
     }
     @else if $size == mediumAndBigger{
         @media #{$medium-more}{ @content; }
@@ -38,8 +47,4 @@
     @else if $size == largeAndBigger{
         @media #{$large-more}{ @content; }
     }
-    @else if $size == x-large{
-        @media #{$x-large}{ @content; }
-    }
-
 }

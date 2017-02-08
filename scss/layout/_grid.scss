@@ -1,11 +1,32 @@
-.elements-list {
-    li{
-        width: $column - $gutter;
-        margin-right: $gutter;
-        float: left;
+%grid {
 
-        &:nth-of-type(4n){
-            margin-right: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include mq(mediumAndBigger){
+        background-color: silver;
+        justify-content: space-around;
+    }
+
+    li{
+        flex-basis: 95%;
+        margin-bottom: 5%;
+
+        @include mq(smallAndBigger){
+            flex-basis: 90%;
+        }
+
+        @include mq(medium){
+            flex-basis: 45%;
+        }
+
+        @include mq(large){
+            flex-basis: 31%;
+        }
+
+        @include mq(x-large){
+            flex-basis: 23%;
         }
     }
 }

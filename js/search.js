@@ -26,7 +26,8 @@ function populateList(){
 
                     var relase = new Date(movie.release_date).getFullYear();
 
-                    var movieElement = `<li style="background-image:url('https://image.tmdb.org/t/p/w500/${movie.poster_path}'), url('http://placehold.it/400x600/061535/1E8BC4?text=movie+poster')">
+                    var movieElement = `<li style=" url('http://placehold.it/400x600/061535/1E8BC4?text=movie+poster')">
+                    <div class="img-cont"><img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" /></div>
                     <h2>${movie.title} <span>${relase}</span></h2>
                     </li>`;
                     // console.log(movieElement);

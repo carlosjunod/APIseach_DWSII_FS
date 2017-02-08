@@ -41,17 +41,18 @@ $s-h2: $s-h3 * $scale;
 $s-h1: $s-h2 * $scale;
 
 // breakpoints
-$smallScreen: 22.8rem;
-$mediumScreen: 42.8rem;
-$largeScreen: 56.25rem;
-// $x-largeScreen: 104.8rem;
+$smallScreen: 320px;
+$mediumScreen: 768px;
+$largeScreen: 1280px;
+$x-largeScreen: 1920px;
 
 // mediaquery rules
-$small: "only screen and (max-width: #{$smallScreen})";
-$medium: "only screen and (min-width: #{$smallScreen}) and (max-width: #{$mediumScreen})";
-$large: "only screen and (min-width: #{$largeScreen})";
-// $x-large: "only screen and (min-width: #{$largeScreen})";
+$small-only: "only screen and (max-width: #{$smallScreen})";
+$medium-only: "only screen and (min-width: #{$mediumScreen}) and (max-width: #{$largeScreen})";
+$large-only: "only screen and (min-width: #{$largeScreen}) and (max-width: #{$x-largeScreen})";
+$x-large: "only screen and (min-width: #{$x-largeScreen})";
 
 // mediaquery
+$small-more: "only screen and (min-width: #{$smallScreen})";
 $medium-more: "only screen and (min-width: #{$mediumScreen})";
 $large-more: "only screen and (min-width: #{$largeScreen})";
