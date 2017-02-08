@@ -5,8 +5,8 @@
     justify-content: center;
 
     @include mq(mediumAndBigger){
-        background-color: silver;
-        justify-content: space-around;
+        // background-color: silver;
+        justify-content: space-between;
     }
 
     li{
@@ -18,15 +18,15 @@
         }
 
         @include mq(medium){
-            flex-basis: 45%;
+            flex-basis: 32%;
         }
 
         @include mq(large){
-            flex-basis: 31%;
+            flex-basis: 23%;
         }
 
         @include mq(x-large){
-            flex-basis: 23%;
+            flex-basis: 19%;
         }
     }
 }
