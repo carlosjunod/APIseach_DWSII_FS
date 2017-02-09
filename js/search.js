@@ -69,13 +69,25 @@ function populateList(){
                     movies.forEach((movie) => {
                         console.log('MOVIE: ' + movie.title);
 
-                        var movieElement = `<li style="background-image:url('https://image.tmdb.org/t/p/w500/${movie.poster_path}'), url('http://placehold.it/400x600/061535/1E8BC4?text=movie+poster')">
-                        <h2>${movie.title}</h2>
-                            <div class='actor'>
-                            <h3>${actor.name}</h3>
-                            <span class="actor-pic" style="background-image:url('https://image.tmdb.org/t/p/w150${actor.profile_path}')"></span>
+                        var movieElement = `<li>
+
+                            <div class="img-cont">
+                                <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" />
+                            </div>
+
+                            <div class='title-actor'>
+                                <h2>${movie.title}</h2>
+                                <h3>${actor.name}</h3>
                             </div>
                         </li>`;
+
+
+                        // var movieElement = `<li style=" url('http://placehold.it/400x600/061535/1E8BC4?text=movie+poster')">
+                        // <div class="img-cont"><img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" /></div>
+                        // <h2>${movie.title} <span>${relase}</span></h2>
+                        // </li>`;
+                        // // console.log(movieElement);
+                        // container.insertAdjacentHTML('beforeend', movieElement);
 
                         container.insertAdjacentHTML('beforeend', movieElement);
 

@@ -6,7 +6,7 @@ $highligt-color: #FDC42C;
 $dark-color: #424244;
 $alert-color: #DB365B;
 
-// grid variables
+// grid (no-flex) variables
 $n-of-columns: 4;
 $columns: 100 / $n-of-columns;
 $gutter: $columns * 0.07%;

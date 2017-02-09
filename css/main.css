@@ -138,6 +138,34 @@ header:after, .elements-list li:before, .message li:before {
     header:after, .elements-list li:before, .message li:before {
       background: none; } }
 
+header:before {
+  content: "";
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#424244+0,73198c+99 */
+  background: #424244;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #424244 0%, #73198c 99%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #424244 0%, #73198c 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #424244 0%, #73198c 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424244', endColorstr='#73198c',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
+
+@media only screen and (min-width: 1280px) {
+  header nav ul, header nav ul.hide {
+    display: flex !important;
+    flex-direction: row;
+    flex-basis: 20%;
+    background-color: transparent;
+    height: auto; } }
+
 input[type='text'], input[type='submit'],
 button,
 input[type='email'],
@@ -196,46 +224,98 @@ input[type='radio'] {
         flex-basis: 19%; } }
 
 header {
-  background-color: green;
+  background-image: url("https://source.unsplash.com/T-G9PVLOfOY/1600x900");
   background-size: cover;
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 3rem;
   align-items: baseline;
   margin-bottom: 3rem; }
+  @media only screen and (min-width: 1280px) {
+    header {
+      padding-bottom: 4rem; } }
   header nav {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
+    @media only screen and (min-width: 1280px) {
+      header nav {
+        background-color: rgba(66, 66, 68, 0.7);
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        margin-bottom: 4rem; } }
     header nav a {
       order: 1; }
+      @media only screen and (min-width: 1280px) {
+        header nav a {
+          order: 0;
+          flex-basis: 30%; } }
       header nav a img {
         width: 100%;
         padding-left: 2rem;
         padding-right: 2rem; }
+        @media only screen and (min-width: 1280px) {
+          header nav a img {
+            width: 50%;
+            padding-left: 0rem;
+            padding-right: 0rem; } }
     header nav ul {
+      top: 0;
+      position: relative;
       order: 0;
       flex-basis: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
-      margin-bottom: 10px;
       height: 40%;
       background-color: rgba(66, 66, 68, 0.7); }
+      header nav ul.hide {
+        display: none; }
       header nav ul li a {
         color: #EEF1F3;
         text-decoration: none;
         padding: 1rem 0px;
         display: block; }
+        @media only screen and (min-width: 1280px) {
+          header nav ul li a {
+            font-size: 1.5rem; } }
+        header nav ul li a:hover {
+          color: #FDC42C; }
     header nav .burger-icon {
+      position: relative;
+      background-color: rgba(66, 66, 68, 0.7);
+      padding-bottom: 1rem;
+      padding-top: 1rem;
       flex-basis: 100%;
       display: flex;
       align-items: stretch;
       justify-content: flex-end;
       font-size: 2rem;
-      height: 40px; }
+      margin-bottom: 10px; }
+      @media only screen and (min-width: 1280px) {
+        header nav .burger-icon {
+          display: none; } }
+      header nav .burger-icon:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1; }
+      header nav .burger-icon.active .icon span:nth-of-type(1) {
+        transform: rotate(-45deg);
+        left: 5px;
+        top: 15px; }
+      header nav .burger-icon.active .icon span:nth-of-type(2) {
+        opacity: 0;
+        left: 20px; }
+      header nav .burger-icon.active .icon span:nth-of-type(3) {
+        transform: rotate(45deg);
+        top: 15px;
+        left: 5px; }
       header nav .burger-icon .icon {
         flex-basis: 40px;
         position: relative;
@@ -256,17 +336,6 @@ header {
             top: 14px; }
           header nav .burger-icon .icon span:nth-of-type(3) {
             top: 22px; }
-        header nav .burger-icon .icon.active span:nth-of-type(1) {
-          transform: rotate(-45deg);
-          left: 5px;
-          top: 15px; }
-        header nav .burger-icon .icon.active span:nth-of-type(2) {
-          opacity: 0;
-          left: 20px; }
-        header nav .burger-icon .icon.active span:nth-of-type(3) {
-          transform: rotate(45deg);
-          top: 15px;
-          left: 5px; }
       header nav .burger-icon .menu {
         flex-basis: 60px;
         font-size: 1.5rem;
@@ -316,8 +385,15 @@ header {
       padding: 0px;
       width: 100%;
       line-height: 1rem; }
+      header form p input[type='text'], header form p input[type='submit'], header form p
+      button {
+        background-color: #EEF1F3; }
       header form p input[type='submit'] {
-        line-height: 1rem; }
+        background: url("../images/magnifyGlass.png") right center no-repeat;
+        line-height: 1rem;
+        background-color: #FDC42C;
+        color: #424244;
+        font-weight: bolder; }
 
 .elements-list, .message {
   display: flex;
@@ -330,14 +406,10 @@ header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    background-color: green; }
+    background-color: #424244; }
     @media only screen and (min-width: 768px) and (max-width: 1280px) {
       .elements-list li, .message li {
-        background-color: purple;
         flex-direction: columns; } }
-    @media only screen and (min-width: 1280px) and (max-width: 1920px) {
-      .elements-list li, .message li {
-        background-color: orange; } }
     .elements-list li .img-cont, .message li .img-cont {
       display: block;
       flex-basis: 50%; }
@@ -354,6 +426,12 @@ header {
       padding-top: 1rem;
       padding-left: 1rem;
       width: 100%; }
+      @media only screen and (min-width: 768px) {
+        .elements-list li h2, .message li h2 {
+          flex-basis: 100%;
+          position: absolute;
+          bottom: 2rem;
+          z-index: 2; } }
       .elements-list li h2 span, .message li h2 span {
         display: block;
         border-top: 1px solid #EEF1F3;
@@ -364,9 +442,47 @@ header {
         font-weight: lighter;
         font-style: italic;
         font-size: 0.9rem; }
+    .elements-list li .title-actor, .message li .title-actor {
+      flex-basis: 50%; }
       @media only screen and (min-width: 768px) {
-        .elements-list li h2, .message li h2 {
+        .elements-list li .title-actor, .message li .title-actor {
           flex-basis: 100%;
           position: absolute;
-          bottom: 2rem;
-          z-index: 2; } }
+          bottom: 0;
+          width: 100%; } }
+      .elements-list li .title-actor h3, .message li .title-actor h3 {
+        color: #EEF1F3;
+        display: block;
+        border-top: 1px solid #EEF1F3;
+        margin-top: 0.3rem;
+        padding-top: 0.3rem;
+        margin-left: 1rem;
+        opacity: 0.8;
+        width: 75%;
+        font-weight: lighter;
+        font-style: italic;
+        font-size: 0.9rem; }
+        @media only screen and (min-width: 768px) {
+          .elements-list li .title-actor h3, .message li .title-actor h3 {
+            width: 60%;
+            padding-left: 0;
+            margin-left: 0;
+            position: relative;
+            bottom: 0.6rem;
+            left: 1rem;
+            z-index: 2; } }
+
+footer {
+  background-color: #061535;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  z-index: 2; }
+  footer p {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    margin-bottom: 0px;
+    color: #EEF1F3;
+    padding: 2rem; }

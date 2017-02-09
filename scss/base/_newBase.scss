@@ -1,6 +1,9 @@
 header{
     // background-image: url('https://images.unsplash.com/photo-1485848225137-7a97afbde637');
-    background-color: green;
+    //background-color: green;
+    // background-image: url('https://source.unsplash.com/collection/140031/1600x900');
+
+    background-image: url('https://source.unsplash.com/T-G9PVLOfOY/1600x900');
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
@@ -8,9 +11,18 @@ header{
     align-items: baseline;
     margin-bottom: 3rem;
 
+    @include mq(largeAndBigger){
+        padding-bottom: 4rem;
+    }
+
     &:after{
         @extend %bg-gradient-bottom;
     }
+
+    &:before{
+        @extend %color-gradient-cover;
+    }
+
 
     nav{
         width: 100%;
@@ -18,44 +30,128 @@ header{
         flex-wrap: wrap;
         justify-content: center;
 
+        @include mq(largeAndBigger){
+            background-color: rgba($dark-color, 0.7);
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            margin-bottom: 4rem;
+        }
+
         a{
             order:1;
+
+            @include mq(largeAndBigger){
+                order: 0;
+                flex-basis: 30%;
+            }
+
             img{
                 width: 100%;
                 padding-left: 2rem;
                 padding-right: 2rem;
 
+                @include mq(largeAndBigger){
+                    width: 50%;
+                    padding-left: 0rem;
+                    padding-right: 0rem;
+                }
             }
         }
 
         ul{
-            // flex-box
+
+            top: 0;
+            position: relative;
             order: 0;
             flex-basis: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            margin-bottom: 10px;
 
             height: 40%;
             background-color: rgba($dark-color, 0.7);
+
+            // media query for $largeScreen
+            @extend %menu-desktop;
+
+            &.hide{
+                display: none;
+
+                // media query for $largeScreen
+                @extend %menu-desktop;
+
+            }
 
             li a{
                 color: $background-color;
                 text-decoration: none;
                 padding: 1rem 0px;
                 display: block;
+
+                @include mq(largeAndBigger){
+                    font-size: 1.5rem;
+                }
+
+                &:hover{
+                    color:$highligt-color;
+                }
+
             }
         }
 
         .burger-icon{
+            position: relative;
+            background-color: rgba($dark-color, 0.7);
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+
             flex-basis: 100%;
             display: flex;
             align-items: stretch;
             justify-content: flex-end;
             font-size: 2rem;
-            height: 40px;
+            // height: 40px;
+            margin-bottom: 10px;
+
+            @include mq(largeAndBigger){
+                display: none;
+            }
+
+            &:before{
+                content: "";
+                position: absolute;
+                top:0;
+                bottom: 0;
+                left:0;
+                right: 0;
+                z-index: 1;
+            }
+
+            &.active .icon{
+
+                span {
+                    &:nth-of-type(1){
+                    // transform-origin: center right;
+                    transform: rotate(-45deg);
+                    left:5px;
+                    top:15px;
+                    }
+
+                    &:nth-of-type(2){
+                    opacity: 0;
+                    left: 20px;
+                    }
+
+                    &:nth-of-type(3){
+
+                    // transform-origin: center right;
+                    transform: rotate(45deg);
+                    top: 15px;
+                    left:5px;
+                    }
+                }
+            }
 
             .icon{
                 flex-basis: 40px;
@@ -87,35 +183,7 @@ header{
 
                 }
 
-
-                &.active{
-
-                    span {
-                        &:nth-of-type(1){
-                        // transform-origin: center right;
-                        transform: rotate(-45deg);
-                        left:5px;
-                        top:15px;
-                        }
-
-                        &:nth-of-type(2){
-                        opacity: 0;
-                        left: 20px;
-                        }
-
-                        &:nth-of-type(3){
-
-                        // transform-origin: center right;
-                        transform: rotate(45deg);
-                        top: 15px;
-                        left:5px;
-                        }
-                    }
-                }
             }
-
-
-
 
             .menu{
                 flex-basis: 60px;
@@ -125,11 +193,6 @@ header{
                 padding-right: 10px;
             }
 
-            div{
-                // padding: 10px;
-                // background-color: red;
-                // border:1px solid green;
-            }
         }
 
     }
@@ -191,11 +254,18 @@ header{
                 line-height: 1rem;
 
                 &[type='text']{
+                    background-color: $background-color;
+
                 }
 
                 &[type='submit']{
+                    background: url('../images/magnifyGlass.png') right center no-repeat;
                     line-height: 1rem;
+                    background-color: $highligt-color;
+                    color: $dark-color;
+                    font-weight: bolder;
                 }
+
             }
 
         }
@@ -224,16 +294,11 @@ header{
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        background-color: green;
+        background-color: $dark-color;
 
 
         @include mq(medium){
-            background-color: purple;
             flex-direction: columns;
-        }
-
-        @include mq(large){
-            background-color: orange;
         }
 
         &:before{
@@ -264,6 +329,13 @@ header{
             padding-left: 1rem;
             width: 100%;
 
+            @include mq(mediumAndBigger){
+                flex-basis: 100%;
+                position: absolute;
+                bottom: 2rem;
+                z-index: 2;
+            }
+
             span{
                 display: block;
                 border-top: 1px solid $background-color;
@@ -276,14 +348,63 @@ header{
                 font-size: 0.9rem;
             }
 
+        }
+
+        // actors search
+        .title-actor{
+            flex-basis: 50%;
+
+
             @include mq(mediumAndBigger){
                 flex-basis: 100%;
                 position: absolute;
-                bottom: 2rem;
-                z-index: 2;
+                bottom: 0;
+                width: 100%;
             }
+
+            h3{
+                color: $background-color;
+                display: block;
+                border-top: 1px solid $background-color;
+                margin-top: 0.3rem;
+                padding-top: 0.3rem;
+                margin-left: 1rem;
+                opacity: 0.8;
+                width: 75%;
+                font-weight: lighter;
+                font-style: italic;
+                font-size: 0.9rem;
+
+                @include mq(mediumAndBigger){
+                    width: 60%;
+                    padding-left: 0;
+                    margin-left: 0;
+                    position: relative;
+                    bottom: 0.6rem;
+                    left: 1rem;
+                    z-index: 2;
+                }
+
+            }
+
 
         }
 
+    }
+}
+
+footer{
+    background-color: $primary-color;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 2;
+
+    p{
+        @include wrapper;
+        margin-bottom: 0px;
+        color:$background-color;
+        padding: 2rem;
     }
 }
